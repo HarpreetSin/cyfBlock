@@ -69,20 +69,20 @@ prettify.toHTML(run(), console);
 
 /*Block Added*/
 
-var food, item;
+var Foods, UserFavFoods, food;
 
 
-food = ['Amritsari Kulcha', 'Saag Paneer', 'Malai kulfi', 'Lassi', 'Prathas'];
+Foods = ['Amritsari Kulcha', 'Saag Paneer', 'Malai kulfi', 'Lassi', 'Prathas'];
+UserFavFoods = [];
 
 
-document.getElementById('add').addEventListener('click', (event) => {
-  event.target.style.color = '#33ff33';
+document.getElementById('addSmiley').addEventListener('click', (event) => {
   let element_blocksIntro = document.getElementById('blocksIntro');
   element_blocksIntro.replaceChildren();
-  food.forEach((item) => {
+  Foods.forEach((food) => {
     let new_ul = document.createElement('ul');
     let new_li = document.createElement('li');
-    new_li.innerText = item;
+    new_li.innerText = food;
 
     new_ul.appendChild(new_li);
 
@@ -90,3 +90,31 @@ document.getElementById('add').addEventListener('click', (event) => {
   });
 
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   
+   
+
+   
+
+   
+

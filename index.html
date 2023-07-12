@@ -8,7 +8,6 @@ You only need to write the HTML that goes inside the <body> tag. To add things t
     <title>Harpreet Homepage</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style2.css">
-    <script src="script.js"></script>
 </head>
 
 <body>
@@ -121,7 +120,31 @@ You only need to write the HTML that goes inside the <body> tag. To add things t
     <!--Block Added-->
 <p>You can find out here the popular dishes of Punjab.</p>
 <div id="blocksIntro"></div>
-<button id="add">😋 </button>
+<button width="100px" id="addSmiley">😋 </button>
+<script>
+    
+ var Foods, UserFavFoods, food;
+
+
+    Foods = ['Amritsari Kulcha', 'Saag Paneer', 'Malai kulfi', 'Lassi', 'Prathas'];
+    UserFavFoods = [];
+
+
+    document.getElementById('addSmiley').addEventListener('click', (event) => {
+        let element_blocksIntro = document.getElementById('blocksIntro');
+        element_blocksIntro.replaceChildren();
+        Foods.forEach((food) => {
+            let new_ul = document.createElement('ul');
+            let new_li = document.createElement('li');
+            new_li.innerText = food;
+
+            new_ul.appendChild(new_li);
+
+            element_blocksIntro.appendChild(new_ul);
+        });
+
+    });  
+</script>
 
     <footer class="c-site-footer">
         <div class="icon">
@@ -135,8 +158,8 @@ You only need to write the HTML that goes inside the <body> tag. To add things t
             <img alt="whatsapp icon" class="fb" src="https://thumbs.dreamstime.com/b/print-234325955.jpg">
         </div>
     </footer>
+        <script src="script.js"></script>
 </body>
-
 <!--- All the tests are red! You have to make them green. 
 
 Q How do you make the tests pass?
